@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  background: rgba(250, 250, 250, 1);
+  grid-template-columns: [col-1] 10% [col-2] 80% [col-3] 10%;
+  grid-template-rows: [row-1] 600px [row-2] 1000px [row-3] 40px;
+  justif-items: start;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-main {
+  z-index: 99;
+  display: grid;
+  grid-template-columns: [col-1] 25% [col-2] 38% [col-3] 37%;
+  grid-template-rows: [row-1] 100%;
+  justif-items: start;
+  grid-column: col-1 / col-4;
+  grid-row: row-1;
+  height: 60px;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header-brand {
+  text-align: center;
+  padding-top: 20px;
+  grid-column: col-1;
+  grid-ax: row-1;
+}
+
+.header-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.header-info {
+  text-align: center;
+  padding-top: 20px;
+  grid-column: col-2;
+  grid-row: row-1;
+}
+
+.header-menu {
+  text-align: left;
+  padding-top: 20px;
+  grid-column: col-3;
+  grid-row: row-1;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  width: 110px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.slider {
+  grid-column: 1/4;
+  grid-row: row-1;
+  background: linear-gradient(
+    45deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(255, 156, 0, 1) 100%
+  );
+  background-position: center;
+}
+
+.left-menu {
+  grid-column: col-1;
+  grid-row: row-2;
+  height: auto;
+  width: auto;
+  padding: 20px;
+}
+
+.container {
+  grid-column: col-2;
+  grid-row: row-2;
+  grid-template-column: [col-1] 40% [col-2] 60%;
+  height: auto;
+  width: auto;
+  margin-top: -300px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+@media only screen and (max-width: 768px) {
+  .left-menu {
+    display: none;
+  }
+
+  .container {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
